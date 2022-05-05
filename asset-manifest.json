@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/React-Internationalization/static/css/main.827ae028.css",
+    "main.js": "/React-Internationalization/static/js/main.e1a22958.js",
+    "static/media/background.jpg": "/React-Internationalization/static/media/background.b6148b1eae7a165bef0c.jpg",
+    "index.html": "/React-Internationalization/index.html",
+    "static/media/getFetch.cjs": "/React-Internationalization/static/media/getFetch.c780682470504fffbd04.cjs",
+    "main.827ae028.css.map": "/React-Internationalization/static/css/main.827ae028.css.map",
+    "main.e1a22958.js.map": "/React-Internationalization/static/js/main.e1a22958.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.827ae028.css",
+    "static/js/main.e1a22958.js"
+  ]
+}

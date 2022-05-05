@@ -1,0 +1,19 @@
+{
+    "welcome_to": "Welcome To",
+    "github_club": "The Github Club",
+    "membership_completed_successfully": "Membership Completed Successfully",
+    "pls_enter_email": "Please Enter Your Email First",
+    "members": "Members",
+    "join_our_newsletter": "Join Our Newsletter",
+    "enter_email": "Enter Email",
+    "join": "JOIN",
+    "by_subscribe": "By subscribing, you agree with",
+    "terms_of_service": "Terms of Service",
+    "and": "and",
+    "privacy_policy": "Privacy Policy",
+    "support_language": "This page supports English and Persian languages",
+    "developer_sign": "Built With React and Tailwind by EhsaN Karimi",
+    "about_us": "About Us",
+    "privacy": "Privacy",
+    "contact": "Contact"
+}
