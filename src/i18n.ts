@@ -15,7 +15,7 @@ i18n.use(Backend)
             escapeValue: false,
         },
         backend: {
-            loadPath: "/public/locales/{{lng}}/translation.json",
+            loadPath: "./public/locales/{{lng}}/translation.json",
         },
         detection: {
             lookupLocalStorage: "Github_Club_Lang",
