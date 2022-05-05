@@ -9,7 +9,7 @@ i18n.use(Backend)
     .init({
         fallbackLng: "en",
         backend: {
-            loadPath: "/locales/{{lng}}/translation.json",
+            loadPath: "./locales/{{lng}}/translation.json",
             allowMultiLoading: false,
         },
         interpolation: {
