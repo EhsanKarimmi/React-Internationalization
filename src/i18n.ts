@@ -1,21 +1,28 @@
 import i18n from "i18next";
+import Backend from "i18next-xhr-backend";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
-import Backend from "i18next-http-backend";
-// import HttpApi from "i18next-http-backend";
-// import XHR from "i18next-xhr-backend";
+import enTranslation from "../public/locales/en/translation.json";
+import faTranslation from "../public/locales/fa/translation.json";
+
+const resources = {
+    en: {
+        translation: enTranslation,
+    },
+    fa: {
+        translation: faTranslation,
+    },
+};
 
 i18n.use(Backend)
     .use(LanguageDetector)
     .use(initReactI18next)
     .init({
-        debug: true,
         fallbackLng: "en",
+        debug: true,
+        resources,
         interpolation: {
             escapeValue: false,
-        },
-        backend: {
-            loadPath: "./public/locales/{{lng}}/translation.json",
         },
         detection: {
             lookupLocalStorage: "Github_Club_Lang",
