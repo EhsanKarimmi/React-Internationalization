@@ -1,12 +1,13 @@
 import i18next from "i18next";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { useTranslation } from "react-i18next";
 
 function App() {
-    const { t } = useTranslation();
-    const [email, setEmail] = useState("");
+    const { t } = useTranslation(); //* Load translator files.
+    const [email, setEmail] = useState(""); //* Save email address.
 
+    //* Run when join button clicked.
     const join = () => {
         if (email) {
             toast.success(`${t("membership_completed_successfully")}`);
@@ -16,7 +17,7 @@ function App() {
         }
     };
 
-    //* Change language and direction *//
+    //* Change language and direction.
     const changeLng = () => {
         const lng = localStorage.getItem("Github_Club_Lang");
         if (lng === "en") {
@@ -28,6 +29,7 @@ function App() {
         }
     };
 
+    //* UseEffect.
     useEffect(() => {
         const lng = localStorage.getItem("Github_Club_Lang");
         if (lng === "en") {
@@ -39,6 +41,7 @@ function App() {
 
     return (
         <div className="min-h-screen flex flex-col text-white ">
+            {/* Switch language button */}
             <div className="flex justify-end items-center px-5 py-2">
                 <button
                     onClick={() => changeLng()}
@@ -47,19 +50,23 @@ function App() {
                     {localStorage.getItem("Github_Club_Lang") === "en" ? "EN" : "FA"}
                 </button>
             </div>
+            {/* Page content */}
             <main className="container mx-auto text-center flex-1 p-5">
+                {/* Toast notification */}
                 <div className="ltrDirection">
                     <Toaster />
                 </div>
+                {/* Page header */}
                 <header className="mb-5">
                     <h1 className="font-bold text-5xl uppercase">{t("welcome_to")}</h1>
                     <h3 className="text-3xl uppercase my-5">{t("github_club")}</h3>
                 </header>
+                {/* Number of members */}
                 <div className="bg-gray-500 inline-block p-3 rounded-3xl bg-opacity-50 font-medium ">
                     1,000,000 {t("members")}
                 </div>
                 <p className="font-medium text-xl my-3 uppercase">{t("join_our_newsletter")}</p>
-
+                {/* Email input and join button */}
                 <div className="my-6 ltrDirection">
                     <input
                         type="email"
@@ -76,7 +83,7 @@ function App() {
                         {t("join")}
                     </button>
                 </div>
-
+                {/* Description */}
                 <div className="mt-48 text-base  space-y-3">
                     <p>
                         {t("by_subscribe")}{" "}
@@ -92,9 +99,11 @@ function App() {
                     <p>{t("support_language")}</p>
                 </div>
             </main>
+            {/* Footer */}
             <footer className="flex justify-between items-center p-5">
+                {/* Creator */}
                 <p className="font-medium">{t("developer_sign")}</p>
-
+                {/* Links */}
                 <div className="flex justify-center items-center gap-5 px-5 text-blue-500">
                     <a href="https://github.com/EhsanKarimmi" target="_blank">
                         {" "}
